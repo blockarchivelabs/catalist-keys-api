@@ -1,0 +1,37 @@
+import { ValueOf } from '@chainsafe/ssz';
+import * as ssz from './ssz-types.js';
+export declare type Bytes4 = ValueOf<typeof ssz.Bytes4>;
+export declare type Bytes8 = ValueOf<typeof ssz.Bytes8>;
+export declare type Bytes20 = ValueOf<typeof ssz.Bytes20>;
+export declare type Bytes32 = ValueOf<typeof ssz.Bytes32>;
+export declare type Bytes48 = ValueOf<typeof ssz.Bytes48>;
+export declare type Bytes96 = ValueOf<typeof ssz.Bytes96>;
+export declare type Uint8 = ValueOf<typeof ssz.Uint8>;
+export declare type Uint16 = ValueOf<typeof ssz.Uint16>;
+export declare type Uint32 = ValueOf<typeof ssz.Uint32>;
+export declare type UintNum64 = ValueOf<typeof ssz.UintNum64>;
+export declare type UintNumInf64 = ValueOf<typeof ssz.UintNumInf64>;
+export declare type UintBn64 = ValueOf<typeof ssz.UintBn64>;
+export declare type UintBn128 = ValueOf<typeof ssz.UintBn128>;
+export declare type UintBn256 = ValueOf<typeof ssz.UintBn256>;
+export declare type Slot = UintNumInf64;
+export declare type Epoch = UintNumInf64;
+export declare type SyncPeriod = UintNum64;
+export declare type CommitteeIndex = UintNum64;
+export declare type SubcommitteeIndex = UintNum64;
+export declare type ValidatorIndex = UintNum64;
+export declare type Gwei = UintBn64;
+export declare type Root = Bytes32;
+export declare type Version = Bytes4;
+export declare type DomainType = Bytes4;
+export declare type ForkDigest = Bytes4;
+export declare type Domain = Bytes32;
+export declare type BLSPubkey = Bytes48;
+export declare type BLSSecretKey = Bytes32;
+export declare type BLSSignature = Bytes96;
+export declare type ParticipationFlags = Uint8;
+export declare type ExecutionAddress = Bytes20;
+/** Common non-spec type to represent roots as strings */
+export declare type RootHex = string;
+/** Non-spec type to signal time is represented in seconds */
+export declare type TimeSeconds = number;

@@ -1,0 +1,18 @@
+'use strict';
+
+Object.defineProperty(exports, '__esModule', { value: true });
+
+var constants = require('@catalist-nestjs/constants');
+
+const VALIDATORS_EXIT_BUS_ORACLE_HASH_CONSENSUS_TOKEN = Symbol('validatorsExitBusOracleHashConsensus');
+const VALIDATORS_EXIT_BUS_ORACLE_HASH_CONSENSUS_ADDRESSES = {
+    [constants.CHAINS.Mainnet]: '0x7FaDB6358950c5fAA66Cb5EB8eE5147De3df355a',
+    [constants.CHAINS.Goerli]: '0x8374B4aC337D7e367Ea1eF54bB29880C3f036A51',
+    [constants.CHAINS.Holesky]: '0xe77Cf1A027d7C10Ee6bb7Ede5E922a181FF40E8f',
+    [constants.CHAINS.Sepolia]: '0x098a952BD200005382aEb3229e38ae39A7616F56',
+    [constants.CHAINS.EnduranceDevnet]: '0x39F95E8182E4a58e2cf20aB963bD279C9033665A',
+    [constants.CHAINS.EnduranceMainnet]: '0xF602028fa58EBDA976C3A6ec5A8dB73AA47cb5D0',
+};
+
+exports.VALIDATORS_EXIT_BUS_ORACLE_HASH_CONSENSUS_ADDRESSES = VALIDATORS_EXIT_BUS_ORACLE_HASH_CONSENSUS_ADDRESSES;
+exports.VALIDATORS_EXIT_BUS_ORACLE_HASH_CONSENSUS_TOKEN = VALIDATORS_EXIT_BUS_ORACLE_HASH_CONSENSUS_TOKEN;

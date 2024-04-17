@@ -1,8 +1,8 @@
 {
-  "name": "lido-keys-api",
+  "name": "catalist-keys-api",
   "version": "1.0.3",
-  "description": "Lido Node Operators keys service",
-  "author": "Lido team",
+  "description": "Catalist Node Operators keys service",
+  "author": "Catalist team",
   "private": true,
   "license": "MIT",
   "mikro-orm": {
@@ -14,10 +14,10 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/lidofinance/lido-keys-api.git"
+    "url": "git+https://github.com/blockarchivelabs/catalist-keys-api.git"
   },
   "bugs": {
-    "url": "https://github.com/lidofinance/lido-keys-api/issues"
+    "url": "https://github.com/blockarchivelabs/catalist-keys-api/issues"
   },
   "scripts": {
     "postinstall": "rimraf ./node_modules/@ethersproject/abstract-provider/src.ts/*.ts",
@@ -38,6 +38,8 @@
     "test:e2e:docker": "mikro-orm schema:drop -r && mikro-orm migration:up && jest -i --config jest-e2e.json && chronix compile && chronix test",
     "test:e2e:docker:debug": "mikro-orm schema:drop -r && mikro-orm migration:up && node --inspect-brk -r tsconfig-paths/register -r ts-node/register node_modules/.bin/jest -i --config jest-e2e.json && chronix compile && chronix test",
     "typechain": "typechain --target=ethers-v5 --out-dir ./src/generated ./src/staking-router-modules/contracts/abi/*.json",
+    "typechain:package": "typechain --target=ethers-v5 --out-dir ./packages/contracts/src/generated ./packages/contracts/abi/*.json",    
+    "build:package": "rollup -c",
     "chronix:compile": "chronix compile",
     "chronix:test": "chronix test",
     "test:alerts": "promtool test rules alerts/*.test.yml",
@@ -45,14 +47,17 @@
     "fork:init": "node chronix-init"
   },
   "dependencies": {
-    "@catalist-nestjs/consensus": "0.0.0",
-    "@catalist-nestjs/constants": "0.0.0",
-    "@catalist-nestjs/contracts": "0.0.0",
-    "@catalist-nestjs/execution": "0.0.0",
-    "@catalist-nestjs/fetch": "0.0.0",
-    "@catalist-nestjs/logger": "0.0.0",
-    "@catalist-nestjs/middleware": "0.0.0",
-    "@catalist-nestjs/validators-registry": "0.0.0",
+    "@lidofinance/yarn-workspaces-list": "0.1.1",
+    "@rollup/plugin-node-resolve": "^13.3.0",
+    
+    "@catalist-nestjs/consensus": "workspace:*",
+    "@catalist-nestjs/constants": "workspace:*",
+    "@catalist-nestjs/contracts": "workspace:*",
+    "@catalist-nestjs/execution": "workspace:*",
+    "@catalist-nestjs/fetch": "workspace:*",
+    "@catalist-nestjs/logger": "workspace:*",
+    "@catalist-nestjs/middleware": "workspace:*",
+    "@catalist-nestjs/validators-registry": "workspace:*",
     "@mikro-orm/cli": "^5.7.13",
     "@mikro-orm/core": "^5.7.13",
     "@mikro-orm/knex": "^5.7.13",

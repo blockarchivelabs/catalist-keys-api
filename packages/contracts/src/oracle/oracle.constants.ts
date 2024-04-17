@@ -1,0 +1,12 @@
+import { CHAINS } from '@catalist-nestjs/constants';
+
+export const ORACLE_CONTRACT_TOKEN = Symbol('oracleContract');
+
+export const ORACLE_CONTRACT_ADDRESSES = {
+  [CHAINS.Mainnet]: '0x442af784A788A5bd6F42A01Ebe9F287a871243fb',
+  [CHAINS.Goerli]: '0x24d8451BC07e7aF4Ba94F69aCDD9ad3c6579D9FB',
+  [CHAINS.Holesky]: '0x072f72BE3AcFE2c52715829F2CD9061A6C8fF019',
+  [CHAINS.Sepolia]: '0x3483c140EF7F2716460198Ff831a8e53F05F1606',
+  [CHAINS.EnduranceDevnet]: '0x342B3AA29a7425bcd0dB61d7c8Ca2D1D66AE7CED',
+  [CHAINS.EnduranceMainnet]: '0x53e585ae2aa7789cd8B7190a352A0d4c291ab179',
+};

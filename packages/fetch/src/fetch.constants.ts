@@ -1,0 +1,5 @@
+export const FETCH_GLOBAL_OPTIONS_TOKEN = Symbol('fetchGlobalOptions');
+
+export const FETCH_GLOBAL_RETRY_DEFAULT_ATTEMPTS = 0;
+export const FETCH_GLOBAL_RETRY_DEFAULT_BASE_URLS = [];
+export const FETCH_GLOBAL_RETRY_DEFAULT_DELAY = 1000;

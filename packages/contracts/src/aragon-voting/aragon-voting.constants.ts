@@ -1,0 +1,12 @@
+import { CHAINS } from '@catalist-nestjs/constants';
+
+export const ARAGON_VOTING_CONTRACT_TOKEN = Symbol('aragonVotingContract');
+
+export const ARAGON_VOTING_CONTRACT_ADDRESSES = {
+  [CHAINS.Mainnet]: '0x2e59A20f205bB85a89C53f1936454680651E618e',
+  [CHAINS.Goerli]: '0xbc0b67b4553f4cf52a913de9a6ed0057e2e758db',
+  [CHAINS.Holesky]: '0xdA7d2573Df555002503F29aA4003e398d28cc00f',
+  [CHAINS.Sepolia]: '0x39A0EbdEE54cB319f4F42141daaBDb6ba25D341A',
+  [CHAINS.EnduranceMainnet]: '0x827c8945359366A3909c34928EC498594659E4c2',
+  [CHAINS.EnduranceDevnet]: '0x27F7C63ee5492F614568b03e61d78D0f3d536488',
+};
